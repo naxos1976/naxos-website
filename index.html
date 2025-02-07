@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ιστοσελίδα για τη Νάξο</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #007bff; }
-    </style>
+    <title>Προστατευμένη Σελίδα</title>
+    <script>
+        function checkPassword() {
+            var password = prompt("Εισάγετε τον κωδικό:");
+            if (password !== "mysticpass123") {
+                alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
+                window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>Καλώς ήρθατε στην Ιστοσελίδα για τη Νάξο!</h1>
-    <p>Αυτή είναι μια αρχική δοκιμαστική σελίδα.</p>
+<body onload="checkPassword()">
+    <h1>Καλώς ήρθατε στη σελίδα!</h1>
+    <p>Αν βλέπετε αυτό το μήνυμα, εισάγατε τον σωστό κωδικό.</p>
 </body>
 </html>
+
