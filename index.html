@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Προστατευμένη Σελίδα</title>
-    <script>
-        function checkPassword() {
-            var password = prompt("Εισάγετε τον κωδικό:");
-            if (password !== "1234") {
-                alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
-                window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
-            }
-        }
-    </script>
+    <title>Νάξος - Μια Ματιά στην Ιστορία και τον Πολιτισμό</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="checkPassword()">
-    <h1>Καλώς ήρθατε στη σελίδα!</h1>
-    <p>Αν βλέπετε αυτό το μήνυμα, εισάγατε τον σωστό κωδικό.</p>
+<body>
+    <header>
+        <h1>Καλώς ήρθατε στη Νάξο</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="#history">Ιστορία</a></li>
+                <li><a href="#culture">Πολιτισμός</a></li>
+                <li><a href="#gallery">Φωτογραφίες</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Η Νάξος</h2>
+            <p>Η μεγαλύτερη και πιο εύφορη από τις Κυκλάδες, γεμάτη ιστορία, πολιτισμό και φυσικές ομορφιές.</p>
+        </section>
+
+        <section id="history">
+            <h2>Ιστορία</h2>
+            <p>Η Νάξος έχει πλούσια ιστορία από την αρχαιότητα μέχρι σήμερα. Εδώ γεννήθηκε ο Διόνυσος, σύμφωνα με τη μυθολογία.</p>
+        </section>
+
+        <section id="culture">
+            <h2>Πολιτισμός & Παράδοση</h2>
+            <p>Μουσεία, παραδοσιακά φεστιβάλ, τοπική κουζίνα και λαϊκή τέχνη αποτελούν κομμάτι της ναξιακής κληρονομιάς.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Φωτογραφίες</h2>
+            <p>Εικόνες από τα μαγευτικά τοπία και τα γραφικά χωριά της Νάξου.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Επικοινωνία</h2>
+            <p>Για περισσότερες πληροφορίες, μπορείτε να επικοινωνήσετε μαζί μας.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Νάξος - Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
 </body>
 </html>
-
