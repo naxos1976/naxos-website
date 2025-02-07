@@ -1,15 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Dancing Script", cursive; /* Καλλιγραφική γραμματοσειρά */
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #D4AF37; /* Μουσταρδί background */
     color: #333;
     text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Εφέ σκιάς */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.banner:hover {
+    transform: scale(1.05); /* Μικρό zoom όταν περνάει το ποντίκι */
+}
+
 header {
-    background-color: #007bff;
-    color: white;
+    position: relative;
     padding: 20px;
 }
 
