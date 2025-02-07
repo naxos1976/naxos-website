@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Νάξος - Μια Ματιά στην Ιστορία και τον Πολιτισμό</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-    <img src="images/Banner.png" alt="Ναξιακό Αρχείο" class="banner">
-    <h1>Καλώς ήρθατε στη Νάξο</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Αρχική</a></li>
-            <li><a href="#history">Ιστορία</a></li>
-            <li><a href="#culture">Πολιτισμός</a></li>
-            <li><a href="#gallery">Φωτογραφίες</a></li>
-            <li><a href="#contact">Επικοινωνία</a></li>
-        </ul>
-    </nav>
-</header>
+    <script>
+        function checkPassword() {
+            var password = prompt("Εισάγετε τον κωδικό πρόσβασης:");
+            if (password !== "mysticpass123") {
+                alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
+                window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body onload="checkPassword()">
+    <header>
+        <img src="images/Banner.png" alt="Ναξιακό Αρχείο" class="banner">
+        <h1>Καλώς ήρθατε στη Νάξο</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="#history">Ιστορία</a></li>
+                <li><a href="#culture">Πολιτισμός</a></li>
+                <li><a href="#gallery">Φωτογραφίες</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="home">
