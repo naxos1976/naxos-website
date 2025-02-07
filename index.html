@@ -11,7 +11,13 @@
             if (password !== "mysticpass123") {
                 alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
                 window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
+            } else {
+                document.body.style.display = "block";
             }
+        }
+        window.onload = function() {
+            document.body.style.display = "none";
+            checkPassword();
         }
     </script>
     <style>
@@ -25,10 +31,27 @@
             height: auto;
             display: block;
             animation: fadeIn 2s ease-in-out;
+            margin: 0; /* Αφαιρεί οποιοδήποτε κενό */
+            padding: 0;
+        }
+
+        header {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
-<body onload="checkPassword()">
+<body>
     <header>
         <img src="images/Banner.png" alt="Ναξιακό Αρχείο" class="banner">
         <h1>Καλώς ήρθατε στη Νάξο</h1>
