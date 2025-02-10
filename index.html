@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Νάξος - Μια Ματιά στην Ιστορία και τον Πολιτισμό</title>
+    <title>Η Προσωπική Βιβλιοθήκη του Δημήτρη Κυπραίου</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function checkPassword() {
             var password = prompt("Εισάγετε τον κωδικό πρόσβασης:");
-            if (password !== "1234") {
+            if (password !== "mysticpass123") {
                 alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
                 window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
             } else {
@@ -32,10 +32,11 @@
 
         .banner {
             width: 100%;
-            height: auto;
+            height: 300px;
+            object-fit: cover;
             display: block;
             animation: fadeIn 2s ease-in-out;
-            margin: 0; /* Αφαιρεί οποιοδήποτε κενό */
+            margin: 0;
             padding: 0;
         }
 
@@ -58,48 +59,42 @@
 </head>
 <body>
     <header>
-        <img src="images/Banner.png" alt="Ναξιακό Αρχείο" class="banner">
-        <h1>Καλώς ήρθατε στη Νάξο</h1>
+        <img src="images/Banner.png" alt="Προσωπική Βιβλιοθήκη" class="banner">
+        <h1>Η Προσωπική Βιβλιοθήκη του Δημήτρη Κυπραίου</h1>
         <nav>
             <ul>
-                <li><a href="#home">Αρχική</a></li>
-                <li><a href="#history">Ιστορία</a></li>
-                <li><a href="#culture">Πολιτισμός</a></li>
-                <li><a href="#gallery">Φωτογραφίες</a></li>
-                <li><a href="#contact">Επικοινωνία</a></li>
+                <li><a href="#books">Βιβλία</a></li>
+                <li><a href="#newspapers">Εφημερίδες</a></li>
+                <li><a href="#magazines">Περιοδικά</a></li>
+                <li><a href="#articles">Άρθρα</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Η Νάξος</h2>
-            <p>Η μεγαλύτερη και πιο εύφορη από τις Κυκλάδες, γεμάτη ιστορία, πολιτισμό και φυσικές ομορφιές.</p>
+        <section id="books">
+            <h2>Βιβλία</h2>
+            <p>Συλλογή βιβλίων με θέμα τη Νάξο και άλλα αγαπημένα θέματα.</p>
         </section>
 
-        <section id="history">
-            <h2>Ιστορία</h2>
-            <p>Η Νάξος έχει πλούσια ιστορία από την αρχαιότητα μέχρι σήμερα. Εδώ γεννήθηκε ο Διόνυσος, σύμφωνα με τη μυθολογία.</p>
+        <section id="newspapers">
+            <h2>Εφημερίδες</h2>
+            <p>Αρχείο εφημερίδων σχετικών με την ιστορία και τον πολιτισμό της Νάξου.</p>
         </section>
 
-        <section id="culture">
-            <h2>Πολιτισμός & Παράδοση</h2>
-            <p>Μουσεία, παραδοσιακά φεστιβάλ, τοπική κουζίνα και λαϊκή τέχνη αποτελούν κομμάτι της ναξιακής κληρονομιάς.</p>
+        <section id="magazines">
+            <h2>Περιοδικά</h2>
+            <p>Περιοδικά με πλούσιο υλικό για την παράδοση και τις τέχνες.</p>
         </section>
 
-        <section id="gallery">
-            <h2>Φωτογραφίες</h2>
-            <p>Εικόνες από τα μαγευτικά τοπία και τα γραφικά χωριά της Νάξου.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Επικοινωνία</h2>
-            <p>Για περισσότερες πληροφορίες, μπορείτε να επικοινωνήσετε μαζί μας.</p>
+        <section id="articles">
+            <h2>Άρθρα</h2>
+            <p>Επιλεγμένα άρθρα για τη Νάξο και γενικότερα ενδιαφέροντα θέματα.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Νάξος - Όλα τα δικαιώματα διατηρούνται.</p>
+        <p>&copy; 2025 Δημήτρης Κυπραίος - Προσωπική Βιβλιοθήκη. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
 </body>
 </html>
