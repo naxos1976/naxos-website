@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function checkPassword() {
+            console.log("Starting password check..."); // Log for debugging
             var password = prompt("Εισάγετε τον κωδικό πρόσβασης:");
             if (password !== "1234") {
+                console.error("Incorrect password entered."); // Log incorrect password
                 alert("Λάθος κωδικός! Πρόσβαση απαγορεύεται.");
                 window.location.href = "https://google.com"; // Ανακατεύθυνση αν ο κωδικός είναι λάθος
             } else {
+                console.log("Password correct. Displaying content."); // Log successful password
                 document.body.style.display = "block";
             }
         }
         window.onload = function() {
+            console.log("Window loaded. Hiding content until password check."); // Log window load
             document.body.style.display = "none";
             checkPassword();
         }
@@ -54,7 +58,7 @@
             list-style: none;
             padding: 0;
             text-align: center;
-            font-size: 24px; /* Μεγαλύτερο μέγεθος */
+            font-size: 24px;
         }
 
         nav ul li {
@@ -64,16 +68,14 @@
 
         nav ul li a {
             text-decoration: none;
-            color: white; /* Λευκή γραμματοσειρά */
+            color: white;
             padding: 10px 15px;
-            background-color: #333;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Εφέ */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #555;
-            transform: scale(1.1); /* Εφέ μεγέθυνσης κατά το hover */
+            color: #aaa;
+            transform: scale(1.1);
         }
 
         footer {
@@ -129,3 +131,4 @@
     </footer>
 </body>
 </html>
+
