@@ -4,14 +4,20 @@ FROM php:8.1-apache
 # Ρύθμιση του ServerName για να αποφύγουμε τις προειδοποιήσεις
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Ενεργοποίηση των απαραίτητων modules (αν δεν το έχεις ήδη κάνει)
-RUN docker-php-ext-install mysqli pdo pdo_mysql && a2enmod rewrite
+# Εγκατάσταση extensions για MySQL
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Αντιγραφή του κώδικα της εφαρμογής σου
+# Ενεργοποίηση του mod_rewrite για το Apache (αν χρειάζεται)
+RUN a2enmod rewrite
+
+# Αντιγραφή του κώδικα της εφαρμογής στο Apache directory
 COPY . /var/www/html/
 
-# Ρυθμίσεις δικαιωμάτων (προαιρετικό)
+# Ρυθμίσεις δικαιωμάτων
 RUN chown -R www-data:www-data /var/www/html
 
-# Ανοιχτή θύρα για HTTP
+# Άνοιγμα θύρας 80 για HTTP
 EXPOSE 80
+
+# Εκκίνηση του Apache σε λειτουργία "foreground"
+CMD ["apache2-foreground"]
